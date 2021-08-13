@@ -59,6 +59,7 @@ def notifyServer():
     os.system('docker exec minecraft-server rcon-cli say Server will shutdown in 30 seconds')
     time.sleep(20)
 
+    #Countdown to server shutdown, displayed in minecraft rcon
     for i in range(10, 0, -1):
         time.sleep(1)
         os.system('docker exec minecraft-server rcon-cli say Server will shutdown in ' + str(i) + ' seconds')
